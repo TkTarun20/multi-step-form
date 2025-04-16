@@ -1,0 +1,13 @@
+# project dependencies
+node_modules
+
+# local build
+dist
+
+# general
+notes.txt
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.DS_Store

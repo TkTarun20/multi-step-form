@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    }
+
+    html {
+        @apply m-xxxs:overflow-auto;
+        box-sizing: border-box;
+    }
+
+    body {
+        @apply md:py-20 pb-28 min-h-svh text-md font-normal bg-gray-3 m-xxxs:overflow-auto;
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    input:focus,
+    input:focus-visible {
+        @apply outline-none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+        @apply outline-none;
+    }
+
+    @supports (not selector(:focus-visible)) {
+        a:focus,
+        button:focus {
+            @apply outline-none;
+        }
+    }
+
+    a {
+        @apply focus-visible:ring-2 supports-[not_selector(:focus-visible)]:focus:ring-2 ring-purplish-blue ring-offset-2 ring-offset-gray-3;
+    }
+
+    .attribution a:link,
+    .attribution a:visited {
+        @apply underline underline-offset-4 transition-colors;
+    }
+
+    @media (hover: hover) {
+        .attribution a:hover {
+            @apply text-purplish-blue;
+        }    
+    }
+
+    .attribution a:active {
+        @apply text-purplish-blue;
+    } 
+
+    td:last-child {
+        text-align: right;
+    }
+
+    @media (hover: hover) {
+        .prev-btn:hover {
+            @apply text-marine-blue;
+        }
+
+        .next-btn:hover {
+            @apply opacity-85;
+        }
+
+        .confirm-btn:hover {
+            @apply opacity-70;
+        }
+
+        .change-btn:hover {
+            @apply text-purplish-blue/80;
+        }
+
+        .radio-label:hover {
+            @apply border-purplish-blue;
+        }
+
+        .checkbox-label:hover {
+            @apply border-purplish-blue;
+        }
+    }
+}
